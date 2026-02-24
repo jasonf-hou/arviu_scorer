@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score - {{ image_code }}</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        /* ── Header ── */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 16px;
+            background: #16213e;
+            border-bottom: 1px solid #333;
+            height: 40px;
+        }
+        .header h2 { font-size: 15px; font-weight: 600; }
+        .progress { font-size: 13px; color: #aaa; display: flex; align-items: center; gap: 8px; }
+        .progress-bar { width: 120px; height: 5px; background: #333; border-radius: 3px; }
+        .progress-fill { height: 100%; background: #4a90d9; border-radius: 3px; }
+
+        /* ── Main layout ── */
+        .main { display: flex; height: calc(100vh - 40px); }
+
+        /* ── Image panel (left) ── */
+        .image-panel {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            cursor: crosshair;
+            background: #111;
+        }
+        .image-panel canvas {
+            position: absolute;
+            top: 0; left: 0;
+        }
+
+        /* ── Status bar inside image panel ── */
+        .status-bar {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 12px;
+            background: rgba(0,0,0,0.75);
+            font-size: 12px;
+            color: #aaa;
+            z-index: 20;
+        }
+        .status-bar .mode {
+            color: #ffcc00;
+            font-weight: 600;
+        }
+
+        /* ── Sidebar (right) ── */
+        .sidebar {
+            width: 300px;
+            background: #16213e;
+            border-left: 1px solid #333;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Opacity control */
+        .opacity-section {
+            padding: 10px 12px;
+            border-bottom: 1px solid #333;
+        }
+        .opacity-section label { font-size: 13px; font-weight: 600; }
+        .opacity-section input[type="range"] { width: 100%; margin-top: 4px; }
+
+        /* Reference thumbnail */
+        .reference-section {
+            padding: 10px 12px;
+            border-bottom: 1px solid #333;
+        }
+        .reference-section h3 { font-size: 13px; margin-bottom: 6px; }
+        .reference-section img { width: 100%; border-radius: 4px; }
+
+        /* Measurements list */
+        .measurements-section {
+            flex: 1;
+            padding: 10px 12px;
+            overflow-y: auto;
+        }
+        .measurements-section h3 { font-size: 13px; margin-bottom: 8px; }
+
+        .measurement-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 8px;
+            background: #1a1a2e;
+            border-radius: 6px;
+            margin-bottom: 4px;
+            font-size: 12px;
+            border-left: 3px solid #4a90d9;
+        }
+        .measurement-item .dist { font-weight: 600; color: #4fc3f7; }
+        .measurement-item .delete-btn {
+            background: none;
+            border: none;
+            color: #ff6666;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 0 4px;
+        }
+        .measurement-item .delete-btn:hover { color: #ff3333; }
+
+        /* Pending point indicator */
+        .pending-msg {
+            padding: 8px;
+            background: #2a2a4e;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            font-size: 12px;
+            color: #ffcc00;
+            text-align: center;
+        }
+
+        /* Actions */
+        .actions {
+            padding: 10px 12px;
+            border-top: 1px solid #333;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .submit-btn:hover { background: #219a52; }
+        .submit-btn:disabled { background: #555; cursor: not-allowed; }
+        .secondary-btn {
+            width: 100%;
+            padding: 8px;
+            background: transparent;
+            color: #aaa;
+            border: 1px solid #444;
+            border-radius: 8px;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 6px;
+        }
+        .secondary-btn:hover { border-color: #888; color: #ddd; }
+
+        .help-text {
+            font-size: 11px;
+            color: #555;
+            padding: 6px 12px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h2>{{ image_code }}</h2>
+    <div class="progress">
+        {{ progress_done }}/{{ progress_total }}
+        <div class="progress-bar">
+            <div class="progress-fill"
+                 style="width:{{ (progress_done / progress_total * 100) if progress_total else 0 }}%"></div>
+        </div>
+    </div>
+</div>
+
+<div class="main">
+    <!-- Image panel with canvas overlay -->
+    <div class="image-panel" id="imagePanel">
+        <canvas id="canvas"></canvas>
+        <div class="status-bar">
+            <span id="coordsDisplay">—</span>
+            <span class="mode" id="modeDisplay">Click: participant mark</span>
+            <span id="zoomDisplay">100%</span>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="opacity-section">
+            <label>Drawing opacity: <span id="opacityVal">70</span>%</label>
+            <input type="range" id="opacitySlider" min="0" max="100" value="70">
+        </div>
+
+        <div class="reference-section">
+            <h3>Reference</h3>
+            <img src="{{ reference_url }}" alt="Reference">
+        </div>
+
+        <div class="measurements-section">
+            <h3>Measurements (<span id="measCount">0</span>)</h3>
+            <div id="pendingMsg" class="pending-msg" style="display:none">
+                Point 1 placed — now click the reference target
+            </div>
+            <div id="measList"></div>
+        </div>
+
+        <div class="help-text">
+            Left-click: place points &bull; Right-drag: pan &bull; Scroll: zoom<br>
+            Esc: cancel pending point &bull; Z: undo last measurement
+        </div>
+
+        <div class="actions">
+            <button class="submit-btn" id="submitBtn" onclick="submitAll()">
+                Submit &amp; Next
+            </button>
+            <button class="secondary-btn" onclick="clearAll()">Clear All</button>
+            <button class="secondary-btn" onclick="undoLast()">Undo Last (Z)</button>
+        </div>
+    </div>
+</div>
+
+<script>
+const IMAGE_CODE = "{{ image_code }}";
+const MM_PER_PX  = {{ mm_per_px }};
+const IMG_W = 1110, IMG_H = 1215;
+
+// ── State ──
+let measurements = [];   // [{id, p1:{x,y}, p2:{x,y}, dist_px, dist_mm}]
+let pendingP1 = null;     // first click of a pair
+let nextId = 1;
+
+// ── View transform ──
+let zoom = 1, panX = 0, panY = 0;
+let isPanning = false, lastPan = {x:0, y:0};
+
+// ── Canvas & images ──
+const panel  = document.getElementById('imagePanel');
+const canvas = document.getElementById('canvas');
+const ctx    = canvas.getContext('2d');
+
+const drawingImg   = new Image();
+const referenceImg = new Image();
+let imagesLoaded = 0;
+
+drawingImg.onload = referenceImg.onload = () => {
+    if (++imagesLoaded === 2) { fitView(); render(); }
+};
+drawingImg.src   = "{{ image_url }}";
+referenceImg.src = "{{ reference_url }}";
+
+// Opacity
+let drawingOpacity = 0.7;
+document.getElementById('opacitySlider').addEventListener('input', e => {
+    drawingOpacity = e.target.value / 100;
+    document.getElementById('opacityVal').textContent = e.target.value;
+    render();
+});
+
+// ── Coordinate helpers ──
+function screenToImg(sx, sy) {
+    return { x: (sx - panX) / zoom, y: (sy - panY) / zoom };
+}
+
+function fitView() {
+    const pw = panel.clientWidth, ph = panel.clientHeight - 30; // minus status bar
+    zoom = Math.min(pw / IMG_W, ph / IMG_H) * 0.95;
+    panX = (pw - IMG_W * zoom) / 2;
+    panY = (ph - IMG_H * zoom) / 2;
+    canvas.width  = panel.clientWidth;
+    canvas.height = panel.clientHeight - 30;
+    render();
+}
+window.addEventListener('resize', fitView);
+
+// ── Render ──
+function render() {
+    const w = canvas.width, h = canvas.height;
+    ctx.clearRect(0, 0, w, h);
+    ctx.save();
+    ctx.translate(panX, panY);
+    ctx.scale(zoom, zoom);
+
+    // Draw reference underneath at full opacity
+    ctx.globalAlpha = 1.0;
+    ctx.drawImage(referenceImg, 0, 0, IMG_W, IMG_H);
+
+    // Draw participant drawing on top with adjustable opacity
+    ctx.globalAlpha = drawingOpacity;
+    ctx.drawImage(drawingImg, 0, 0, IMG_W, IMG_H);
+    ctx.globalAlpha = 1.0;
+
+    // Draw completed measurements
+    measurements.forEach(m => {
+        drawLine(m.p1, m.p2, '#4fc3f7', 2);
+        drawPoint(m.p1, '#ff4444', m.id + 'a');
+        drawPoint(m.p2, '#44ff44', m.id + 'b');
+        // Distance label at midpoint
+        const mx = (m.p1.x + m.p2.x) / 2;
+        const my = (m.p1.y + m.p2.y) / 2;
+        drawLabel(mx, my, `${m.dist_mm.toFixed(1)} mm`);
+    });
+
+    // Draw pending first point
+    if (pendingP1) {
+        drawPoint(pendingP1, '#ffcc00', '?');
+    }
+
+    ctx.restore();
+}
+
+function drawPoint(p, color, label) {
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, 5 / zoom, 0, Math.PI * 2);
+    ctx.fillStyle = color;
+    ctx.fill();
+    ctx.strokeStyle = '#fff';
+    ctx.lineWidth = 1.5 / zoom;
+    ctx.stroke();
+
+    // Label
+    ctx.font = `bold ${11 / zoom}px sans-serif`;
+    ctx.fillStyle = color;
+    ctx.textAlign = 'center';
+    ctx.fillText(label, p.x, p.y - 8 / zoom);
+}
+
+function drawLine(p1, p2, color, width) {
+    ctx.beginPath();
+    ctx.moveTo(p1.x, p1.y);
+    ctx.lineTo(p2.x, p2.y);
+    ctx.strokeStyle = color;
+    ctx.lineWidth = width / zoom;
+    ctx.stroke();
+}
+
+function drawLabel(x, y, text) {
+    const fs = 10 / zoom;
+    ctx.font = `bold ${fs}px sans-serif`;
+    const tw = ctx.measureText(text).width;
+    const pad = 3 / zoom;
+    ctx.fillStyle = 'rgba(0,0,0,0.7)';
+    ctx.fillRect(x - tw/2 - pad, y - fs - pad, tw + 2*pad, fs + 2*pad);
+    ctx.fillStyle = '#fff';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'bottom';
+    ctx.fillText(text, x, y);
+}
+
+// ── Mouse interaction ──
+canvas.addEventListener('click', e => {
+    const rect = canvas.getBoundingClientRect();
+    const img = screenToImg(e.clientX - rect.left, e.clientY - rect.top);
+
+    // Bounds check
+    if (img.x < 0 || img.x > IMG_W || img.y < 0 || img.y > IMG_H) return;
+
+    if (!pendingP1) {
+        // First click: participant's drawn mark
+        pendingP1 = { x: Math.round(img.x), y: Math.round(img.y) };
+        document.getElementById('pendingMsg').style.display = 'block';
+        document.getElementById('modeDisplay').textContent = 'Click: reference target';
+    } else {
+        // Second click: reference target
+        const p2 = { x: Math.round(img.x), y: Math.round(img.y) };
+        const dx = pendingP1.x - p2.x, dy = pendingP1.y - p2.y;
+        const dist_px = Math.sqrt(dx*dx + dy*dy);
+        const dist_mm = dist_px * MM_PER_PX;
+
+        measurements.push({
+            id: nextId++,
+            p1: pendingP1,
+            p2: p2,
+            dist_px: dist_px,
+            dist_mm: dist_mm,
+        });
+
+        pendingP1 = null;
+        document.getElementById('pendingMsg').style.display = 'none';
+        document.getElementById('modeDisplay').textContent = 'Click: participant mark';
+        updateMeasList();
+    }
+    render();
+});
+
+// Right-click drag to pan
+canvas.addEventListener('mousedown', e => {
+    if (e.button === 2) {
+        isPanning = true;
+        lastPan = { x: e.clientX, y: e.clientY };
+        e.preventDefault();
+    }
+});
+canvas.addEventListener('contextmenu', e => e.preventDefault());
+
+document.addEventListener('mousemove', e => {
+    // Update coords display
+    const rect = canvas.getBoundingClientRect();
+    const img = screenToImg(e.clientX - rect.left, e.clientY - rect.top);
+    if (img.x >= 0 && img.x <= IMG_W && img.y >= 0 && img.y <= IMG_H) {
+        document.getElementById('coordsDisplay').textContent =
+            `(${Math.round(img.x)}, ${Math.round(img.y)})`;
+    }
+
+    if (isPanning) {
+        panX += e.clientX - lastPan.x;
+        panY += e.clientY - lastPan.y;
+        lastPan = { x: e.clientX, y: e.clientY };
+        render();
+    }
+});
+document.addEventListener('mouseup', e => { if (e.button === 2) isPanning = false; });
+
+// Scroll to zoom (towards cursor)
+canvas.addEventListener('wheel', e => {
+    e.preventDefault();
+    const rect = canvas.getBoundingClientRect();
+    const cx = e.clientX - rect.left, cy = e.clientY - rect.top;
+    const factor = e.deltaY < 0 ? 1.12 : 0.89;
+    const nz = Math.max(0.15, Math.min(8, zoom * factor));
+    panX = cx - (cx - panX) * (nz / zoom);
+    panY = cy - (cy - panY) * (nz / zoom);
+    zoom = nz;
+    document.getElementById('zoomDisplay').textContent = Math.round(zoom * 100) + '%';
+    render();
+});
+
+// Keyboard
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+        pendingP1 = null;
+        document.getElementById('pendingMsg').style.display = 'none';
+        document.getElementById('modeDisplay').textContent = 'Click: participant mark';
+        render();
+    } else if (e.key === 'z' || e.key === 'Z') {
+        undoLast();
+    }
+});
+
+// ── Measurement list ──
+function updateMeasList() {
+    const list = document.getElementById('measList');
+    list.innerHTML = measurements.map(m =>
+        `<div class="measurement-item">
+            <span>#${m.id}</span>
+            <span class="dist">${m.dist_mm.toFixed(1)} mm</span>
+            <span style="color:#888">(${m.dist_px.toFixed(0)} px)</span>
+            <button class="delete-btn" onclick="deleteMeas(${m.id})">x</button>
+        </div>`
+    ).join('');
+    document.getElementById('measCount').textContent = measurements.length;
+}
+
+function deleteMeas(id) {
+    measurements = measurements.filter(m => m.id !== id);
+    updateMeasList();
+    render();
+}
+
+function clearAll() {
+    measurements = [];
+    pendingP1 = null;
+    nextId = 1;
+    document.getElementById('pendingMsg').style.display = 'none';
+    document.getElementById('modeDisplay').textContent = 'Click: participant mark';
+    updateMeasList();
+    render();
+}
+
+function undoLast() {
+    if (pendingP1) {
+        pendingP1 = null;
+        document.getElementById('pendingMsg').style.display = 'none';
+        document.getElementById('modeDisplay').textContent = 'Click: participant mark';
+    } else if (measurements.length) {
+        measurements.pop();
+        updateMeasList();
+    }
+    render();
+}
+
+// ── Submit ──
+async function submitAll() {
+    if (measurements.length === 0) {
+        if (!confirm('No measurements recorded. Skip this image?')) return;
+    }
+
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = 'Submitting...';
+
+    const payload = {
+        image_code: IMAGE_CODE,
+        measurements: measurements.map(m => ({
+            id: m.id,
+            p1_x: m.p1.x, p1_y: m.p1.y,
+            p2_x: m.p2.x, p2_y: m.p2.y,
+        })),
+    };
+
+    try {
+        const resp = await fetch('/submit', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(payload),
+        });
+        const data = await resp.json();
+        if (data.status === 'ok') {
+            window.location.href = data.next;
+        } else {
+            alert('Error: ' + (data.error || 'Unknown'));
+            btn.disabled = false;
+            btn.textContent = 'Submit & Next';
+        }
+    } catch (err) {
+        alert('Network error: ' + err.message);
+        btn.disabled = false;
+        btn.textContent = 'Submit & Next';
+    }
+}
+</script>
+</body>
+</html>

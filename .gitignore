@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+scorer_data/
+icc_output/
+Participants/
+*.xlsx
+participant_analysis_gui.py
+alignment_gui.py
+icc_analysis.py
+reference_png.png

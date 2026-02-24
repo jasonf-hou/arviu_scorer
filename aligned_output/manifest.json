@@ -1,0 +1,990 @@
+{
+  "IMG_5DO6": {
+    "participant_id": "P1",
+    "system": "2D/AR",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P1/P1 - 2D + MR Drawing.png",
+    "transform": {
+      "offset_x": 0.0,
+      "offset_y": 7.301136363636374,
+      "rotation": 0.0,
+      "scale": 1.0511363636363635
+    },
+    "blur_points": 0,
+    "saved_at": "2026-02-24T15:04:42.896918"
+  },
+  "IMG_JZJF": {
+    "participant_id": "P1",
+    "system": "2D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P1/P1 - 2D + Screen Drawing.png",
+    "transform": {
+      "offset_x": -45.0,
+      "offset_y": 2.775568181818244,
+      "rotation": 0.0,
+      "scale": 1.1154743181818183
+    },
+    "blur_points": 0,
+    "saved_at": "2026-02-24T15:04:43.303836"
+  },
+  "IMG_0A82": {
+    "participant_id": "P1",
+    "system": "3D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P1/P1 - 3D + Screen Drawing.png",
+    "transform": {
+      "offset_x": -42.0,
+      "offset_y": -8.852272727272634,
+      "rotation": -360.0,
+      "scale": 1.1154743181818183
+    },
+    "blur_points": 0,
+    "saved_at": "2026-02-24T15:04:43.900291"
+  },
+  "IMG_TO40": {
+    "participant_id": "P1",
+    "system": "AR-VIU",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P1/P1 - 4DMRUS Drawing.png",
+    "transform": {
+      "offset_x": 9.0,
+      "offset_y": 1.7755681818182438,
+      "rotation": 0.0,
+      "scale": 1.0511363636363635
+    },
+    "blur_points": 0,
+    "saved_at": "2026-02-24T15:04:44.398515"
+  },
+  "IMG_DPVB": {
+    "participant_id": "P10",
+    "system": "2D/AR",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P10/P10 - 2D + MR Drawing.png",
+    "transform": {
+      "offset_x": -9.0,
+      "offset_y": 5.301136363636374,
+      "rotation": 0.0,
+      "scale": 1.0511363636363635
+    },
+    "blur_points": 365,
+    "saved_at": "2026-02-24T15:04:45.051675"
+  },
+  "IMG_RCG8": {
+    "participant_id": "P10",
+    "system": "2D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P10/P10 - 2D + Screen Drawing.png",
+    "transform": {
+      "offset_x": -40.0,
+      "offset_y": 20.301136363636374,
+      "rotation": 0.0,
+      "scale": 1.0931648318181817
+    },
+    "blur_points": 395,
+    "saved_at": "2026-02-24T15:04:45.860080"
+  },
+  "IMG_CZMG": {
+    "participant_id": "P10",
+    "system": "3D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P10/P10 - 3D + Screen Drawing.png",
+    "transform": {
+      "offset_x": -54.0,
+      "offset_y": 4.301136363636374,
+      "rotation": 0.0,
+      "scale": 1.11369062984254
+    },
+    "blur_points": 317,
+    "saved_at": "2026-02-24T15:04:46.558966"
+  },
+  "IMG_L53A": {
+    "participant_id": "P10",
+    "system": "AR-VIU",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P10/P10 - 4DMRUS Drawing.png",
+    "transform": {
+      "offset_x": -7.0,
+      "offset_y": 2.301136363636374,
+      "rotation": 0.0,
+      "scale": 1.0511363636363635
+    },
+    "blur_points": 394,
+    "saved_at": "2026-02-24T15:04:47.327536"
+  },
+  "IMG_BQP2": {
+    "participant_id": "P11",
+    "system": "2D/AR",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P11/P11 - 2D + MR Drawing.png",
+    "transform": {
+      "offset_x": 0.0,
+      "offset_y": 7.301136363636374,
+      "rotation": 0.0,
+      "scale": 1.0511363636363635
+    },
+    "blur_points": 388,
+    "saved_at": "2026-02-24T15:04:48.031088"
+  },
+  "IMG_H14Q": {
+    "participant_id": "P11",
+    "system": "2D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P11/P11 - 2D + Screen Drawing.png",
+    "transform": {
+      "offset_x": -39.0,
+      "offset_y": 24.301136363636374,
+      "rotation": 0.0,
+      "scale": 1.0717302272727272
+    },
+    "blur_points": 321,
+    "saved_at": "2026-02-24T15:04:48.680390"
+  },
+  "IMG_S8MX": {
+    "participant_id": "P11",
+    "system": "3D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P11/P11 - 3D + Screen Drawing.png",
+    "transform": {
+      "offset_x": -23.0,
+      "offset_y": 33.301136363636374,
+      "rotation": 0.0,
+      "scale": 1.0717302272727272
+    },
+    "blur_points": 462,
+    "saved_at": "2026-02-24T15:04:49.457562"
+  },
+  "IMG_KWP5": {
+    "participant_id": "P11",
+    "system": "AR-VIU",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P11/P11 - 4DMRUS Drawing.png",
+    "transform": {
+      "offset_x": -16.0,
+      "offset_y": 5.301136363636374,
+      "rotation": 0.0,
+      "scale": 1.0498755044781816
+    },
+    "blur_points": 410,
+    "saved_at": "2026-02-24T15:04:50.188339"
+  },
+  "IMG_BLVA": {
+    "participant_id": "P2",
+    "system": "2D/AR",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P2/P2 - 2D + MR Drawing.png",
+    "transform": {
+      "offset_x": -8.0,
+      "offset_y": 7.301136363636374,
+      "rotation": 0.0,
+      "scale": 1.0511363636363635
+    },
+    "blur_points": 0,
+    "saved_at": "2026-02-24T15:05:28.421721"
+  },
+  "IMG_5PXM": {
+    "participant_id": "P2",
+    "system": "2D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P2/P2 - 2D + Screen Drawing.png",
+    "transform": {
+      "offset_x": -36.0,
+      "offset_y": 14.301136363636374,
+      "rotation": 0.0,
+      "scale": 1.0927275658854545
+    },
+    "blur_points": 0,
+    "saved_at": "2026-02-24T15:05:28.938796"
+  },
+  "IMG_PLMA": {
+    "participant_id": "P2",
+    "system": "3D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P2/P2 - 3D + Screen Drawing.png",
+    "transform": {
+      "offset_x": -35.0,
+      "offset_y": 0.30113636363637397,
+      "rotation": 0.0,
+      "scale": 1.1150281284545454
+    },
+    "blur_points": 0,
+    "saved_at": "2026-02-24T15:05:29.472669"
+  },
+  "IMG_IOY5": {
+    "participant_id": "P2",
+    "system": "AR-VIU",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P2/P2 - 4DMRUS Drawing.png",
+    "transform": {
+      "offset_x": -1.0,
+      "offset_y": -5.698863636363626,
+      "rotation": 0.0,
+      "scale": 1.0511363636363635
+    },
+    "blur_points": 0,
+    "saved_at": "2026-02-24T15:05:30.154343"
+  },
+  "IMG_4YA0": {
+    "participant_id": "P3",
+    "system": "2D/AR",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P3/P3 - 2D + MR Drawing.png",
+    "transform": {
+      "offset_x": 0.0,
+      "offset_y": 7.301136363636374,
+      "rotation": 0.0,
+      "scale": 1.0511363636363635
+    },
+    "blur_points": 0,
+    "saved_at": "2026-02-24T15:05:30.679612"
+  },
+  "IMG_AQLF": {
+    "participant_id": "P3",
+    "system": "2D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P3/P3 - 2D + Screen Drawing.png",
+    "transform": {
+      "offset_x": -50.0,
+      "offset_y": 1.301136363636374,
+      "rotation": 0.0,
+      "scale": 1.1141362843562823
+    },
+    "blur_points": 0,
+    "saved_at": "2026-02-24T15:05:31.214767"
+  },
+  "IMG_P6LA": {
+    "participant_id": "P3",
+    "system": "3D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P3/P3 - 3D + Screen Drawing.png",
+    "transform": {
+      "offset_x": -56.0,
+      "offset_y": -3.698863636363626,
+      "rotation": 0.0,
+      "scale": 1.1145821172031636
+    },
+    "blur_points": 0,
+    "saved_at": "2026-02-24T15:05:31.764994"
+  },
+  "IMG_JS0Z": {
+    "participant_id": "P3",
+    "system": "AR-VIU",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P3/P3 - 4DMRUS Drawing.png",
+    "transform": {
+      "offset_x": -4.0,
+      "offset_y": 13.301136363636374,
+      "rotation": 0.0,
+      "scale": 1.0511363636363635
+    },
+    "blur_points": 0,
+    "saved_at": "2026-02-24T15:05:32.318622"
+  },
+  "IMG_BZ9L": {
+    "participant_id": "P4",
+    "system": "2D/AR",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P4/P4 - 2D + MR Drawing.png",
+    "transform": {
+      "offset_x": 0.0,
+      "offset_y": 7.301136363636374,
+      "rotation": 0.0,
+      "scale": 1.0511363636363635
+    },
+    "blur_points": 197,
+    "saved_at": "2026-02-24T15:05:39.043729"
+  },
+  "IMG_1ZKI": {
+    "participant_id": "P4",
+    "system": "2D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P4/P4 - 2D + Screen Drawing.png",
+    "transform": {
+      "offset_x": -49.0,
+      "offset_y": -16.698863636363626,
+      "rotation": 0.0,
+      "scale": 1.1364190100434082
+    },
+    "blur_points": 208,
+    "saved_at": "2026-02-24T15:05:41.650268"
+  },
+  "IMG_0O1B": {
+    "participant_id": "P4",
+    "system": "3D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P4/P4 - 3D + Screen Drawing.png",
+    "transform": {
+      "offset_x": -36.0,
+      "offset_y": -1.698863636363626,
+      "rotation": 0.0,
+      "scale": 1.1132451535906025
+    },
+    "blur_points": 120,
+    "saved_at": "2026-02-24T15:05:43.192993"
+  },
+  "IMG_ZALG": {
+    "participant_id": "P4",
+    "system": "AR-VIU",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P4/P4 - 4DMRUS Drawing.png",
+    "transform": {
+      "offset_x": -6.0,
+      "offset_y": -7.698863636363626,
+      "rotation": 0.0,
+      "scale": 1.0511363636363635
+    },
+    "blur_points": 313,
+    "saved_at": "2026-02-24T15:05:44.506456"
+  },
+  "IMG_GK9G": {
+    "participant_id": "P5",
+    "system": "2D/AR",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P5/P5 - 2D + MR Drawing.png",
+    "transform": {
+      "offset_x": -3.0,
+      "offset_y": 7.301136363636374,
+      "rotation": 0.0,
+      "scale": 1.0502956227272726
+    },
+    "blur_points": 237,
+    "saved_at": "2026-02-24T15:05:57.968137"
+  },
+  "IMG_DHHM": {
+    "participant_id": "P5",
+    "system": "2D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P5/P5 - 2D + Screen Drawing.png",
+    "transform": {
+      "offset_x": -45.0,
+      "offset_y": 1.7755681818182438,
+      "rotation": 0.0,
+      "scale": 1.1136906298425395
+    },
+    "blur_points": 236,
+    "saved_at": "2026-02-24T14:54:54.015710"
+  },
+  "IMG_CPUH": {
+    "participant_id": "P5",
+    "system": "3D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P5/P5 - 3D + Screen Drawing.png",
+    "transform": {
+      "offset_x": -36.0,
+      "offset_y": 16.301136363636374,
+      "rotation": 0.0,
+      "scale": 1.0918535586691567
+    },
+    "blur_points": 336,
+    "saved_at": "2026-02-24T14:55:20.371551"
+  },
+  "IMG_2QGF": {
+    "participant_id": "P5",
+    "system": "AR-VIU",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P5/P5 - 4DMRUS Drawing.png",
+    "transform": {
+      "offset_x": -11.0,
+      "offset_y": 1.301136363636374,
+      "rotation": 0.0,
+      "scale": 1.0511363636363635
+    },
+    "blur_points": 307,
+    "saved_at": "2026-02-24T14:55:43.760563"
+  },
+  "IMG_ZQMB": {
+    "participant_id": "P6",
+    "system": "2D/AR",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P6/P6 - 2D + MR Drawing.png",
+    "transform": {
+      "offset_x": 0.0,
+      "offset_y": 7.301136363636374,
+      "rotation": 0.0,
+      "scale": 1.0511363636363635
+    },
+    "blur_points": 297,
+    "saved_at": "2026-02-24T14:55:56.668262"
+  },
+  "IMG_NTM9": {
+    "participant_id": "P6",
+    "system": "2D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P6/P6 - 2D + Screen Drawing.png",
+    "transform": {
+      "offset_x": -49.0,
+      "offset_y": -9.698863636363626,
+      "rotation": 0.0,
+      "scale": 1.1150281284545454
+    },
+    "blur_points": 272,
+    "saved_at": "2026-02-24T14:56:14.670283"
+  },
+  "IMG_CNWW": {
+    "participant_id": "P6",
+    "system": "3D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P6/P6 - 3D + Screen Drawing.png",
+    "transform": {
+      "offset_x": -51.0,
+      "offset_y": -6.698863636363626,
+      "rotation": 0.0,
+      "scale": 1.1145821172031636
+    },
+    "blur_points": 224,
+    "saved_at": "2026-02-24T14:56:34.189715"
+  },
+  "IMG_NWUK": {
+    "participant_id": "P6",
+    "system": "AR-VIU",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P6/P6 - 4DMRUS Drawing.png",
+    "transform": {
+      "offset_x": -1.0,
+      "offset_y": -3.698863636363626,
+      "rotation": 0.0,
+      "scale": 1.0511363636363635
+    },
+    "blur_points": 235,
+    "saved_at": "2026-02-24T14:56:57.381321"
+  },
+  "IMG_BLEG": {
+    "participant_id": "P7",
+    "system": "2D/AR",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P7/P7 - 2D + MR Drawing.png",
+    "transform": {
+      "offset_x": -5.0,
+      "offset_y": 5.775568181818244,
+      "rotation": 0.0,
+      "scale": 1.0511363636363635
+    },
+    "blur_points": 159,
+    "saved_at": "2026-02-24T14:57:09.079976"
+  },
+  "IMG_P8XW": {
+    "participant_id": "P7",
+    "system": "2D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P7/P7 - 2D + Screen Drawing.png",
+    "transform": {
+      "offset_x": -36.0,
+      "offset_y": 12.775568181818244,
+      "rotation": 0.0,
+      "scale": 1.0922904748591002
+    },
+    "blur_points": 271,
+    "saved_at": "2026-02-24T14:57:12.865819"
+  },
+  "IMG_UZ7Y": {
+    "participant_id": "P7",
+    "system": "AR-VIU",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P7/P7 - 4DMRUS Drawing.png",
+    "transform": {
+      "offset_x": -6.0,
+      "offset_y": 7.352272727272748,
+      "rotation": 0.0,
+      "scale": 1.0511363636363635
+    },
+    "blur_points": 203,
+    "saved_at": "2026-02-24T15:06:29.419234"
+  },
+  "IMG_L9WT": {
+    "participant_id": "P8",
+    "system": "2D/AR",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P8/P8 - 2D + MR Drawing.png",
+    "transform": {
+      "offset_x": 0.0,
+      "offset_y": 6.775568181818244,
+      "rotation": 0.0,
+      "scale": 1.0511363636363635
+    },
+    "blur_points": 227,
+    "saved_at": "2026-02-24T15:06:31.118340"
+  },
+  "IMG_K8XW": {
+    "participant_id": "P8",
+    "system": "2D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P8/P8 - 2D + Screen Drawing.png",
+    "transform": {
+      "offset_x": -24.0,
+      "offset_y": 30.301136363636374,
+      "rotation": 0.0,
+      "scale": 1.0695884809007752
+    },
+    "blur_points": 294,
+    "saved_at": "2026-02-24T15:06:38.191245"
+  },
+  "IMG_XHDJ": {
+    "participant_id": "P8",
+    "system": "AR-VIU",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P8/P8 - 4DMRUS Drawing.png",
+    "transform": {
+      "offset_x": -3.0,
+      "offset_y": -4.698863636363626,
+      "rotation": 0.0,
+      "scale": 1.0511363636363635
+    },
+    "blur_points": 244,
+    "saved_at": "2026-02-24T15:06:41.128911"
+  },
+  "IMG_BGQL": {
+    "participant_id": "P9",
+    "system": "2D/AR",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P9/P9 - 2D + MR Drawing.png",
+    "transform": {
+      "offset_x": 2.0,
+      "offset_y": -3.698863636363626,
+      "rotation": 0.0,
+      "scale": 1.0511363636363635
+    },
+    "blur_points": 537,
+    "saved_at": "2026-02-24T15:06:42.321976"
+  },
+  "IMG_V2Z4": {
+    "participant_id": "P9",
+    "system": "2D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P9/P9 - 2D + Screen Drawing.png",
+    "transform": {
+      "offset_x": -12.0,
+      "offset_y": 53.301136363636374,
+      "rotation": 0.0,
+      "scale": 1.0511363636363635
+    },
+    "blur_points": 279,
+    "saved_at": "2026-02-24T15:06:43.441311"
+  },
+  "IMG_DS26": {
+    "participant_id": "P9",
+    "system": "3D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P9/P9 - 3D + Screen Drawing.png",
+    "transform": {
+      "offset_x": -42.0,
+      "offset_y": 15.301136363636374,
+      "rotation": 0.0,
+      "scale": 1.0927275658854545
+    },
+    "blur_points": 243,
+    "saved_at": "2026-02-24T15:06:51.324288"
+  },
+  "IMG_6O5E": {
+    "participant_id": "P9",
+    "system": "AR-VIU",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P9/P9 - 4DMRUS Drawing.png",
+    "transform": {
+      "offset_x": -4.0,
+      "offset_y": 3.301136363636374,
+      "rotation": 0.0,
+      "scale": 1.0511363636363635
+    },
+    "blur_points": 213,
+    "saved_at": "2026-02-24T15:06:54.173554"
+  },
+  "IMG_9FGP": {
+    "participant_id": "P12",
+    "system": "2D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P12/p12_2d+screen.png",
+    "transform": {
+      "offset_x": -63.0,
+      "offset_y": 28.62485136741975,
+      "rotation": 0.0,
+      "scale": 1.345715957193817
+    },
+    "blur_points": 134,
+    "saved_at": "2026-02-24T15:04:50.751249"
+  },
+  "IMG_Z7KT": {
+    "participant_id": "P12",
+    "system": "2D/AR",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P12/p12_2d+vr.png",
+    "transform": {
+      "offset_x": 0.0,
+      "offset_y": -1.3751486325802489,
+      "rotation": 0.0,
+      "scale": 1.319857312722949
+    },
+    "blur_points": 140,
+    "saved_at": "2026-02-24T15:04:51.712440"
+  },
+  "IMG_9D9H": {
+    "participant_id": "P12",
+    "system": "AR-VIU",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P12/p12_3d+vr.png",
+    "transform": {
+      "offset_x": -16.0,
+      "offset_y": -12.375148632580249,
+      "rotation": 0.0,
+      "scale": 1.345715957193817
+    },
+    "blur_points": 269,
+    "saved_at": "2026-02-24T15:05:04.412805"
+  },
+  "IMG_OB86": {
+    "participant_id": "P12",
+    "system": "AR-VIU",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P12/p12_4dmrus.png",
+    "transform": {
+      "offset_x": -16.0,
+      "offset_y": -12.375148632580249,
+      "rotation": 0.0,
+      "scale": 1.345715957193817
+    },
+    "blur_points": 269,
+    "saved_at": "2026-02-24T15:05:05.939409"
+  },
+  "IMG_LCQW": {
+    "participant_id": "P13",
+    "system": "2D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P13/p13_2d+screen.png",
+    "transform": {
+      "offset_x": -65.0,
+      "offset_y": -6.375148632580249,
+      "rotation": 0.0,
+      "scale": 1.4275133056859353
+    },
+    "blur_points": 151,
+    "saved_at": "2026-02-24T15:05:06.921694"
+  },
+  "IMG_ZFKW": {
+    "participant_id": "P13",
+    "system": "2D/AR",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P13/p13_2d+vr.png",
+    "transform": {
+      "offset_x": -18.0,
+      "offset_y": -16.37514863258025,
+      "rotation": -1.0,
+      "scale": 1.345715957193817
+    },
+    "blur_points": 131,
+    "saved_at": "2026-02-24T15:05:07.659495"
+  },
+  "IMG_FMS9": {
+    "participant_id": "P13",
+    "system": "3D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P13/p13_3d+screen.png",
+    "transform": {
+      "offset_x": -46.0,
+      "offset_y": 11.624851367419751,
+      "rotation": 0.0,
+      "scale": 1.372081224227158
+    },
+    "blur_points": 193,
+    "saved_at": "2026-02-24T15:05:08.279443"
+  },
+  "IMG_0D41": {
+    "participant_id": "P13",
+    "system": "AR-VIU",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P13/p13_4dmrus.png",
+    "transform": {
+      "offset_x": 4.0,
+      "offset_y": 2.624851367419751,
+      "rotation": 0.0,
+      "scale": 1.319857312722949
+    },
+    "blur_points": 84,
+    "saved_at": "2026-02-24T15:05:08.865877"
+  },
+  "IMG_TJ6C": {
+    "participant_id": "P14",
+    "system": "2D/AR",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P14/p14_2D+vr.png",
+    "transform": {
+      "offset_x": -20.0,
+      "offset_y": -8.375148632580249,
+      "rotation": -180.0,
+      "scale": 1.344639599742615
+    },
+    "blur_points": 114,
+    "saved_at": "2026-02-24T15:05:09.470003"
+  },
+  "IMG_EP00": {
+    "participant_id": "P14",
+    "system": "2D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P14/p14_2d+screen.png",
+    "transform": {
+      "offset_x": -47.0,
+      "offset_y": 5.624851367419751,
+      "rotation": -180.0,
+      "scale": 1.3995228487117013
+    },
+    "blur_points": 170,
+    "saved_at": "2026-02-24T15:05:10.086711"
+  },
+  "IMG_1JGO": {
+    "participant_id": "P14",
+    "system": "3D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P14/p14_3d+screen.png",
+    "transform": {
+      "offset_x": -71.0,
+      "offset_y": -10.375148632580249,
+      "rotation": -180.0,
+      "scale": 1.426942300363661
+    },
+    "blur_points": 165,
+    "saved_at": "2026-02-24T15:05:10.611666"
+  },
+  "IMG_1LUV": {
+    "participant_id": "P14",
+    "system": "AR-VIU",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P14/p14_4dmrus.png",
+    "transform": {
+      "offset_x": -28.0,
+      "offset_y": -24.37514863258025,
+      "rotation": -900.0,
+      "scale": 1.3731795481569562
+    },
+    "blur_points": 141,
+    "saved_at": "2026-02-24T15:05:11.174051"
+  },
+  "IMG_H8HM": {
+    "participant_id": "P15",
+    "system": "2D/AR",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P15/p15_2d+MR.png",
+    "transform": {
+      "offset_x": 51.0,
+      "offset_y": 30.62485136741975,
+      "rotation": -180.0,
+      "scale": 1.2293842469815055
+    },
+    "blur_points": 153,
+    "saved_at": "2026-02-24T15:05:11.717391"
+  },
+  "IMG_3H5P": {
+    "participant_id": "P15",
+    "system": "2D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P15/p15_2d+screen.png",
+    "transform": {
+      "offset_x": -54.0,
+      "offset_y": 6.624851367419751,
+      "rotation": 0.0,
+      "scale": 1.3978440929746452
+    },
+    "blur_points": 92,
+    "saved_at": "2026-02-24T15:05:12.217816"
+  },
+  "IMG_V5PQ": {
+    "participant_id": "P15",
+    "system": "3D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P15/p15_3d+screen.png",
+    "transform": {
+      "offset_x": -60.0,
+      "offset_y": 11.624851367419751,
+      "rotation": -900.0,
+      "scale": 1.3995228487117013
+    },
+    "blur_points": 126,
+    "saved_at": "2026-02-24T15:05:12.914652"
+  },
+  "IMG_MPGF": {
+    "participant_id": "P15",
+    "system": "AR-VIU",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P15/p15_4dmrus.png",
+    "transform": {
+      "offset_x": -8.0,
+      "offset_y": 7.624851367419751,
+      "rotation": -540.0,
+      "scale": 1.319857312722949
+    },
+    "blur_points": 110,
+    "saved_at": "2026-02-24T15:05:13.554348"
+  },
+  "IMG_OIT5": {
+    "participant_id": "P16",
+    "system": "2D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P16/p16_2d+screen.png",
+    "transform": {
+      "offset_x": -164.0,
+      "offset_y": -1.3751486325802489,
+      "rotation": -180.0,
+      "scale": 1.4212447941955197
+    },
+    "blur_points": 219,
+    "saved_at": "2026-02-24T15:05:14.180879"
+  },
+  "IMG_ZL2V": {
+    "participant_id": "P16",
+    "system": "2D/AR",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P16/p16_2d+vr.png",
+    "transform": {
+      "offset_x": -8.0,
+      "offset_y": -3.375148632580249,
+      "rotation": -180.0,
+      "scale": 1.3441017439027179
+    },
+    "blur_points": 84,
+    "saved_at": "2026-02-24T15:05:14.685225"
+  },
+  "IMG_RN9D": {
+    "participant_id": "P16",
+    "system": "3D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P16/p16_3d+screen.png",
+    "transform": {
+      "offset_x": -41.0,
+      "offset_y": 2.624851367419751,
+      "rotation": -180.0,
+      "scale": 1.3995228487117015
+    },
+    "blur_points": 161,
+    "saved_at": "2026-02-24T15:05:15.263016"
+  },
+  "IMG_92MG": {
+    "participant_id": "P16",
+    "system": "AR-VIU",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P16/p16_4DMRUS.png",
+    "transform": {
+      "offset_x": 0.0,
+      "offset_y": 18.62485136741975,
+      "rotation": -180.0,
+      "scale": 1.319857312722949
+    },
+    "blur_points": 174,
+    "saved_at": "2026-02-24T15:05:15.917634"
+  },
+  "IMG_1JVM": {
+    "participant_id": "P17",
+    "system": "2D/AR",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P17/p17_2d+VR.png",
+    "transform": {
+      "offset_x": -5.0,
+      "offset_y": -0.3751486325802489,
+      "rotation": -180.0,
+      "scale": 1.344101743902718
+    },
+    "blur_points": 141,
+    "saved_at": "2026-02-24T15:05:16.561170"
+  },
+  "IMG_V51M": {
+    "participant_id": "P17",
+    "system": "2D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P17/p17_2d+screen.png",
+    "transform": {
+      "offset_x": -34.0,
+      "offset_y": 25.62485136741975,
+      "rotation": -180.0,
+      "scale": 1.3693392562307063
+    },
+    "blur_points": 180,
+    "saved_at": "2026-02-24T15:05:17.164094"
+  },
+  "IMG_ZYLY": {
+    "participant_id": "P17",
+    "system": "3D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P17/p17_3d+screen.png",
+    "transform": {
+      "offset_x": -48.0,
+      "offset_y": 11.624851367419751,
+      "rotation": -180.0,
+      "scale": 1.3989630395722166
+    },
+    "blur_points": 183,
+    "saved_at": "2026-02-24T15:05:17.748498"
+  },
+  "IMG_ES40": {
+    "participant_id": "P17",
+    "system": "AR-VIU",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P17/p17_4dmrus.png",
+    "transform": {
+      "offset_x": -2.0,
+      "offset_y": 6.624851367419751,
+      "rotation": 0.0,
+      "scale": 1.319857312722949
+    },
+    "blur_points": 248,
+    "saved_at": "2026-02-24T15:05:18.404454"
+  },
+  "IMG_D21M": {
+    "participant_id": "P18",
+    "system": "2D/AR",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P18/p18_2d+VR.png",
+    "transform": {
+      "offset_x": -8.0,
+      "offset_y": 18.62485136741975,
+      "rotation": -180.5,
+      "scale": 1.3156396775549921
+    },
+    "blur_points": 265,
+    "saved_at": "2026-02-24T15:05:19.066069"
+  },
+  "IMG_7927": {
+    "participant_id": "P18",
+    "system": "2D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P18/p18_2d+screen.png",
+    "transform": {
+      "offset_x": -50.0,
+      "offset_y": 8.624851367419751,
+      "rotation": -180.0,
+      "scale": 1.4006431391200953
+    },
+    "blur_points": 177,
+    "saved_at": "2026-02-24T15:05:19.571628"
+  },
+  "IMG_DID7": {
+    "participant_id": "P18",
+    "system": "3D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P18/p18_3d+screen.png",
+    "transform": {
+      "offset_x": -37.0,
+      "offset_y": 25.62485136741975,
+      "rotation": -180.0,
+      "scale": 1.3726302763376934
+    },
+    "blur_points": 350,
+    "saved_at": "2026-02-24T15:05:20.272310"
+  },
+  "IMG_5DRC": {
+    "participant_id": "P18",
+    "system": "AR-VIU",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P18/p18_4dmrus.png",
+    "transform": {
+      "offset_x": 5.0,
+      "offset_y": -0.3751486325802489,
+      "rotation": -540.0,
+      "scale": 1.319857312722949
+    },
+    "blur_points": 193,
+    "saved_at": "2026-02-24T15:05:20.790369"
+  },
+  "IMG_YZNB": {
+    "participant_id": "P19",
+    "system": "2D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P19/p19_2d+screen.png",
+    "transform": {
+      "offset_x": -61.0,
+      "offset_y": -2.375148632580249,
+      "rotation": 0.0,
+      "scale": 1.426942300363661
+    },
+    "blur_points": 282,
+    "saved_at": "2026-02-24T15:05:21.415584"
+  },
+  "IMG_UY4W": {
+    "participant_id": "P19",
+    "system": "2D/AR",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P19/p19_2d+vr.png",
+    "transform": {
+      "offset_x": -16.0,
+      "offset_y": 2.624851367419751,
+      "rotation": 0.0,
+      "scale": 1.319857312722949
+    },
+    "blur_points": 140,
+    "saved_at": "2026-02-24T15:05:21.948268"
+  },
+  "IMG_XHML": {
+    "participant_id": "P19",
+    "system": "3D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P19/p19_3d+screen.png",
+    "transform": {
+      "offset_x": -63.0,
+      "offset_y": 6.624851367419751,
+      "rotation": 0.0,
+      "scale": 1.3989630395722166
+    },
+    "blur_points": 137,
+    "saved_at": "2026-02-24T15:05:22.522636"
+  },
+  "IMG_QJM0": {
+    "participant_id": "P19",
+    "system": "AR-VIU",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P19/p19_4dmrus.png",
+    "transform": {
+      "offset_x": -10.0,
+      "offset_y": 22.62485136741975,
+      "rotation": 0.0,
+      "scale": 1.319857312722949
+    },
+    "blur_points": 225,
+    "saved_at": "2026-02-24T15:05:27.873959"
+  },
+  "IMG_BPHJ": {
+    "participant_id": "P7",
+    "system": "3D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P7/P7 - 3D + Screen.png",
+    "transform": {
+      "offset_x": -11.0,
+      "offset_y": 3.775568181818244,
+      "rotation": 0.0,
+      "scale": 1.0606397849544513
+    },
+    "blur_points": 347,
+    "saved_at": "2026-02-24T14:57:15.016759"
+  },
+  "IMG_1YU3": {
+    "participant_id": "P8",
+    "system": "3D/Screen",
+    "original_file": "/Users/jasonhou/Desktop/arviu_revision/arviu_scorer/Participants/P8/P8 - 3D + Screen.png",
+    "transform": {
+      "offset_x": -51.0,
+      "offset_y": -5.698863636363626,
+      "rotation": 0.0,
+      "scale": 1.1145821172031636
+    },
+    "blur_points": 331,
+    "saved_at": "2026-02-24T15:06:39.861771"
+  }
+}

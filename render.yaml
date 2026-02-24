@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: arviu-scorer
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn scorer_app:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+    disk:
+      name: scorer-data
+      mountPath: /opt/render/project/src/scorer_data
+      sizeGB: 1

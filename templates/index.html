@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoring Tool</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 { margin-bottom: 8px; font-size: 24px; }
+        .subtitle { color: #666; margin-bottom: 24px; line-height: 1.5; }
+        label { display: block; font-weight: 600; margin-bottom: 8px; }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        input[type="text"]:focus { outline: none; border-color: #4a90d9; }
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #4a90d9;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        button:hover { background: #3a7bc8; }
+        .instructions {
+            margin-top: 24px;
+            padding: 16px;
+            background: #f0f7ff;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        .instructions h3 { margin-bottom: 8px; font-size: 14px; }
+        .instructions ol { padding-left: 20px; }
+        .instructions li { margin-bottom: 8px; color: #555; line-height: 1.4; }
+        .instructions em { color: #333; font-style: normal; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Localization Error Scorer</h1>
+        <p class="subtitle">
+            Measure the distance between each participant's drawn mark and the
+            corresponding reference target on ultrasound phantom drawings.
+        </p>
+        <form action="/start" method="POST">
+            <label for="scorer_id">Your Scorer ID:</label>
+            <input type="text" id="scorer_id" name="scorer_id"
+                   placeholder="e.g., scorer_1" required autofocus>
+            <button type="submit">Start Scoring</button>
+        </form>
+        <div class="instructions">
+            <h3>How it works:</h3>
+            <ol>
+                <li>Each image shows a <em>participant's drawing overlaid on the
+                    reference template</em>.</li>
+                <li>For each target, click <em>two points</em>:
+                    first the participant's drawn mark, then the actual reference
+                    target. A line will appear showing the error.</li>
+                <li>Repeat for every visible target in the image.</li>
+                <li>Click <em>Submit &amp; Next</em> when done.</li>
+                <li>Your progress is saved &mdash; you can close and resume later.</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
