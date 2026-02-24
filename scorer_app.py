@@ -34,8 +34,10 @@ ALIGNED_DIR = BASE_DIR / "aligned_output"
 SCORER_DATA_DIR = BASE_DIR / "scorer_data"
 SCORER_DATA_DIR.mkdir(exist_ok=True)
 
-# Reference image (all aligned outputs are in 1110x1215 coordinate space)
-REFERENCE_IMG = BASE_DIR / "reference_screen.png"
+# Reference images
+REFERENCE_AR = BASE_DIR / "reference_png.png"       # for 2D/AR, AR-VIU
+REFERENCE_SCREEN = BASE_DIR / "reference_screen.png"  # for 2D/Screen, 3D/Screen
+AR_SYSTEMS = {"2D/AR", "AR-VIU"}
 
 # Pixel-to-mm (same constants as icc_analysis.py)
 BOX_W_INCHES = 5.84
@@ -134,11 +136,14 @@ def score_next():
         return render_template("done.html", total=len(all_codes), scorer_id=scorer_id)
 
     code = remaining[0]
+    manifest = load_manifest()
+    system = manifest.get(code, {}).get("system", "")
+    ref_type = "ar" if system in AR_SYSTEMS else "screen"
     return render_template(
         "score.html",
         image_code=code,
         image_url=f"/image/{code}",
-        reference_url="/reference",
+        reference_url=f"/reference/{ref_type}",
         progress_done=len(scored),
         progress_total=len(all_codes),
         scorer_id=scorer_id,
@@ -154,10 +159,12 @@ def serve_image(code):
     return "Not found", 404
 
 
-@app.route("/reference")
-def serve_reference():
-    if REFERENCE_IMG.exists():
-        return send_file(REFERENCE_IMG, mimetype="image/png")
+@app.route("/reference/<ref_type>")
+def serve_reference(ref_type):
+    if ref_type == "ar" and REFERENCE_AR.exists():
+        return send_file(REFERENCE_AR, mimetype="image/png")
+    if ref_type == "screen" and REFERENCE_SCREEN.exists():
+        return send_file(REFERENCE_SCREEN, mimetype="image/png")
     return "Not found", 404
 
 
